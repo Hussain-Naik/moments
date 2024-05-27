@@ -39,12 +39,10 @@ export const ProfileDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
     }
   };
 
   const handleUnfollow = async (clickedProfile) => {
-    console.log(clickedProfile.following_id)
     try {
       await axiosRes.delete(`/follower/${clickedProfile.following_id}/`);
       setProfileData((prevState) => ({
@@ -62,7 +60,6 @@ export const ProfileDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
     }
   };
 
@@ -77,7 +74,6 @@ export const ProfileDataProvider = ({ children }) => {
           popularProfiles: data,
         }));
       } catch (err) {
-        console.log(err);
       }
     };
 
